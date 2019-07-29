@@ -63,17 +63,18 @@
             <!-- Nav Item - Sucursales -->
             <li class="nav-item">
                 <a class="nav-link" href="sucursales.html">
-                    <i class="fas fa-fw fa-table"></i>
-                    <span>Sucursales</span></a>
-            </li>
+                  <i class="fas fa-fw fa-cog"></i>
+                  <span>Sucursales</span>
+                </a>
+              </li>
 
             <!-- Nav Item - Productos -->
             <li class="nav-item">
                 <a class="nav-link" href="productos.html">
-                    <i class="fas fa-fw fa-table"></i>
-                    <span>Productos</span></a>
-            </li>
-
+                  <i class="fas fa-fw fa-cog"></i>
+                  <span>Productos</span>
+                </a>
+              </li>
             <!-- Divider -->
             <hr class="sidebar-divider d-none d-md-block">
 
@@ -121,8 +122,6 @@
                             </a>
                         </li>
 
-                        
-
                         <!-- Logout Button-->
                         <button class="btn btn-primary" type="button" href="#" data-toggle="modal" data-target="#logoutModal" >
                             <i class="fas fa-sign-out-alt fa-sm fa-fw mr-2 text-gray-400"></i>
@@ -133,114 +132,31 @@
                 <!-- Begin Page Content -->
                 <div class="container-fluid">
 
-                    <!-- Page Heading-->
+                    <!-- TABLA PRODUCTOS -->
+                <input id="nomb" style="margin: 10px" type="text"><br><br>
+                <input id="descrip" style="margin: 10px" type="text"><br><br>
+                <input id="ubic" style="margin: 10px" type="text"><br><br>
+                <input id="costo" style="margin: 10px" type="text"><br><br>
+                <button onclick="agregar()">Agregar</button><br><br>
+                <button onclick="borrar()">borrar</button><br><br>
+                <button onclick="modificar()">modificar</button><br><br>
+                <table>
+                 <thead>
+                     <tr>
+                         <th>Nombre</th>
+                         <th>Descripcion</th>
+                         <th>Ubicacion</th>
+                         <th>Costo</th>
+                     </tr>
+                 </thead>
+                 <tbody id="productos">
+                 </tbody>    
+                 </tbody>
+                </table>
 
-                    <!--
-                    <div class="container-fluid row">
-                        <img src="logo.png" width="50" height="50">
-                        <div class="container d-sm-flex align-items-center justify-content-between mb-4">
-                            <h1>TermoCat</h1>
-                        </div>
-                    </div>
-                    <div class="container-fluid row" style="margin-left: 100px"><h2>Internacional</h2>
-                    </div>-->  
-                
-                    <div class="row" style="margin-top: 100px">
-                        <div class="col-md-6">
-                            <div class="card shadow mb-4">
-                                <div class="card-header py-3">
-                                        <button class="btn btn-primary" type="button"  >
-                                                <i class="fas fa-fw fa-cog"></i>
-                                            Edit
-                                        </button>
-                                    <h6 class="m-0 font-weight-bold text-primary" style="text-align: center;">Nombre Producto</h6>
-                                    
-                                </div>
-                                <div class="card-body">
-                                    <div class="row">
-                                        <div class="col-md-6">
-                                            <p>descripcion</p>
-                                        </div>
-                                        <div class="col-md-">
-                                            <p>ubicacion</p>
-                                        </div>
-                                    </div>
-                                    <div class="row">
-                                        <div class="col-md-6">
-                                            <p>Costo</p>
-                                        </div>
-                                    </div>
-                                </div>     
-                            </div>
-                        </div>
-                        
-                    </div>
-
-                    <div class="row">
-                            <div class="col-md-6">
-                                <div class="card shadow mb-4">
-                                    <div class="card-header py-3">
-                                            <button class="btn btn-primary" type="button"  >
-                                                    <i class="fas fa-fw fa-cog"></i>
-                                                Edit
-                                            </button>
-                                        <h6 class="m-0 font-weight-bold text-primary" style="text-align: center;">Nombre Producto</h6>
-                                        
-                                    </div>
-                                    <div class="card-body">
-                                        <div class="row">
-                                            <div class="col-md-6">
-                                                <p>descripcion</p>
-                                            </div>
-                                            <div class="col-md-">
-                                                <p>ubicacion</p>
-                                            </div>
-                                        </div>
-                                        <div class="row">
-                                            <div class="col-md-6">
-                                                <p>Costo</p>
-                                            </div>
-                                        </div>
-                                    </div>     
-                                </div>
-                            </div>
-                    </div>
-                    <div class="row">
-                            <div class="col-md-6">
-                                <div class="card shadow mb-4">
-                                    <div class="card-header py-3">
-                                            <button class="btn btn-primary" type="button"  >
-                                                    <i class="fas fa-fw fa-cog"></i>
-                                                Edit
-                                            </button>
-                                        <h6 class="m-0 font-weight-bold text-primary" style="text-align: center;">Nombre Producto</h6>
-                                        
-                                    </div>
-                                    <div class="card-body">
-                                        <div class="row">
-                                            <div class="col-md-6">
-                                                <p>descripcion</p>
-                                            </div>
-                                            <div class="col-md-">
-                                                <p>ubicacion</p>
-                                            </div>
-                                        </div>
-                                        <div class="row">
-                                            <div class="col-md-6">
-                                                <p>Costo</p>
-                                            </div>
-                                        </div>
-                                    </div>     
-                                </div>
-                            </div>                          
-                        </div>
-                </div>
                 <!-- Footer -->
             <footer class="sticky-footer bg-white">
                     <!-- Copyright -->
-                    <div class="footer-copyright text-center py-3">© 2019 Copyright:
-                        <a href=""> TermoSoft</a>
-                    </div>
                     <!-- Copyright -->
                 </footer>
                 <!-- End of Footer -->
@@ -267,6 +183,12 @@
             </div>
         </div>
     </div>
+
+     <!-- Botones-->
+     <script src="../js/agregarP.js"></script>
+     <script src="../js/modificarP.js"></script>
+     <script src="../js/borrarP.js"></script>
+ 
 
     <!-- Bootstrap core JavaScript-->
     <script src="../startbootstrap-sb-admin-2-gh-pages/vendor/jquery/jquery.min.js"></script>
